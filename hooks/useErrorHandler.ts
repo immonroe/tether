@@ -3,7 +3,7 @@ import { useErrorHandler as useErrorHandlerContext } from '@/components/provider
 import { AppError } from '@/lib/errors';
 
 export const useErrorHandler = () => {
-  const handleError = useErrorHandlerContext();
+  const { handleError } = useErrorHandlerContext();
 
   const handleAsyncError = useCallback(
     async <T>(
