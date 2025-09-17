@@ -6,4 +6,5 @@ export { ProgressBar } from './ProgressBar';
 export { LoadingSpinner } from './LoadingSpinner';
 export { Skeleton } from './Skeleton';
 export { ErrorBoundary } from './ErrorBoundary';
-export { Toast, ToastContainer } from './Toast';
+export type { Toast } from './Toast';
+export { ToastContainer } from './Toast';
