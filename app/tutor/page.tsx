@@ -1,44 +1,43 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { ChatInterface } from '@/components/chat/ChatInterface';
-import { ChatMessage } from '@/lib/types';
-
-// Mock data
-const mockChatHistory: ChatMessage[] = [
-  { id: "1", message: "Can you explain the concept of derivatives in calculus?", sender: "user", timestamp: "2 minutes ago" },
-  { id: "2", message: "A derivative represents the rate of change of a function at any given point. Think of it as the slope of a tangent line to the curve. For example, if you're driving and your speedometer shows 60 mph, that's the derivative of your position with respect to time at that moment.", sender: "ai", timestamp: "2 minutes ago" },
-];
+import { useChat } from '@/hooks/useChat';
 
 export default function TutorPage() {
-  const [messages, setMessages] = useState<ChatMessage[]>(mockChatHistory);
+  // For now, using a mock user ID. In a real app, this would come from auth context
+  const userId = 'mock-user-123';
+  
+  const {
+    messages,
+    isLoading,
+    error,
+    learningStyle,
+    sendMessage,
+    updateLearningStyle
+  } = useChat({ 
+    userId,
+    initialLearningStyle: 'mixed'
+  });
 
-  const handleSendMessage = (message: string) => {
-    const newMessage: ChatMessage = {
-      id: (messages.length + 1).toString(),
-      message,
-      sender: 'user',
-      timestamp: 'Just now'
-    };
-    
-    setMessages(prev => [...prev, newMessage]);
-    
-    // Simulate AI response
-    setTimeout(() => {
-      const aiResponse: ChatMessage = {
-        id: (messages.length + 2).toString(),
-        message: "I understand you're asking about that topic. Let me provide a detailed explanation...",
-        sender: 'ai',
-        timestamp: 'Just now'
-      };
-      setMessages(prev => [...prev, aiResponse]);
-    }, 1000);
-  };
+  // Convert messages to the format expected by ChatInterface
+  const chatMessages = messages.map(msg => ({
+    id: `${msg.role}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    message: msg.content,
+    sender: (msg.role === 'assistant' ? 'ai' : 'user') as 'user' | 'ai',
+    timestamp: msg.timestamp || new Date().toISOString()
+  }));
 
   return (
     <ChatInterface 
-      messages={messages}
-      onSendMessage={handleSendMessage}
+      messages={chatMessages}
+      onSendMessage={sendMessage}
+      isLoading={isLoading}
+      error={error}
+      learningStyle={learningStyle}
+      onLearningStyleChange={updateLearningStyle}
+      userId={userId}
+      showLearningInsights={true}
     />
   );
 }
