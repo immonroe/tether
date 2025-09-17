@@ -35,6 +35,13 @@ export interface AIResponse {
 
 export type LearningStyle = 'visual' | 'auditory' | 'kinesthetic' | 'reading' | 'mixed';
 
+export interface LearningStyleAnalysis {
+  detectedStyle: LearningStyle;
+  confidence: number;
+  reasoning: string;
+  suggestions: string[];
+}
+
 export interface AIConfig {
   primaryProvider: string;
   fallbackProviders: string[];
