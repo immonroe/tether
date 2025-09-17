@@ -3,4 +3,8 @@ export * from './types';
 export * from './service';
 export * from './providers/openai';
 export * from './providers/anthropic';
+export * from './providers/gemini';
+export * from './providers/huggingface';
+export * from './providers/ollama';
 export * from './providers/fallback';
+export * from './flashcardService';

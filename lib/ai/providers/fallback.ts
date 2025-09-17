@@ -189,6 +189,31 @@ What biological topic would you like to dive into?`;
 What subject or topic would you like to focus on? I can provide more specific guidance!`;
     }
 
+    // Flashcard-specific responses
+    if (message.includes('flashcard') || message.includes('card') || message.includes('study')) {
+      return `I can help you create effective flashcards! Here are some strategies:
+
+**Creating Good Flashcards:**
+- Front: Ask a clear, specific question
+- Back: Provide a concise, accurate answer
+- Use active recall (test yourself without looking)
+- Keep cards simple and focused
+
+**Study Techniques:**
+- Spaced repetition: Review cards at increasing intervals
+- Mix different topics in one session
+- Test yourself regularly
+- Focus on cards you find difficult
+
+**Example Flashcard Topics:**
+- Math: Formulas, definitions, problem-solving steps
+- Science: Key concepts, processes, terminology
+- History: Dates, events, important figures
+- Languages: Vocabulary, grammar rules, translations
+
+What subject would you like to create flashcards for? I can suggest specific questions and answers!`;
+    }
+
     // Default response - more engaging
     return `I'm here to help you learn! I can assist with a wide range of topics:
 
@@ -197,6 +222,7 @@ What subject or topic would you like to focus on? I can provide more specific gu
 **Languages**: Grammar, literature, writing, reading comprehension
 **History**: World history, specific time periods, historical analysis
 **Study Skills**: Test preparation, note-taking, time management
+**Flashcards**: Creating effective study cards, spaced repetition, active recall
 
 What would you like to explore? Feel free to ask specific questions about any subject - I'm here to help you understand and learn!`;
   }
