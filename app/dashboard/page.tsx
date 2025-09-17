@@ -1,16 +1,11 @@
-'use client';
-
 import React from 'react';
-import { Plus, Flame, Target, Clock, Award, MessageCircle, BookOpen } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { Flame, Target, Clock, Award } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
-import { ProgressBar } from '@/components/ui/ProgressBar';
-import { useRouter } from 'next/navigation';
+import { DashboardActions } from '@/components/dashboard/DashboardActions';
+import { RecentSessions } from '@/components/dashboard/RecentSessions';
 
 export default function DashboardPage() {
-  const router = useRouter();
-
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -18,10 +13,7 @@ export default function DashboardPage() {
           <h1 className="text-2xl font-bold text-gray-900">Welcome back!</h1>
           <p className="text-gray-600">Ready to continue your learning journey?</p>
         </div>
-        <Button onClick={() => router.push('/tutor')}>
-          <Plus className="w-4 h-4 mr-2" />
-          Start Learning
-        </Button>
+        <DashboardActions />
       </div>
 
       {/* Stats Cards */}
@@ -79,32 +71,7 @@ export default function DashboardPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card className="p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Sessions</h3>
-          <div className="space-y-4">
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-              <div className="flex items-center space-x-3">
-                <MessageCircle className="w-5 h-5 text-blue-500" />
-                <div>
-                  <p className="font-medium text-gray-900">Calculus Derivatives</p>
-                  <p className="text-sm text-gray-500">45 minutes ago</p>
-                </div>
-              </div>
-              <Button variant="ghost" size="small" onClick={() => router.push('/tutor')}>
-                Resume
-              </Button>
-            </div>
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-              <div className="flex items-center space-x-3">
-                <BookOpen className="w-5 h-5 text-green-500" />
-                <div>
-                  <p className="font-medium text-gray-900">Physics Flashcards</p>
-                  <p className="text-sm text-gray-500">2 hours ago</p>
-                </div>
-              </div>
-              <Button variant="ghost" size="small" onClick={() => router.push('/flashcards')}>
-                Review
-              </Button>
-            </div>
-          </div>
+          <RecentSessions />
         </Card>
 
         <Card className="p-6">

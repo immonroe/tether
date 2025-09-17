@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Sidebar } from './Sidebar';
 import { Header } from './Header';
 import { MobileNavigation } from './MobileNavigation';
@@ -9,7 +10,7 @@ import { PageId } from '@/lib/types';
 interface MainLayoutProps {
   children: React.ReactNode;
   currentPage: PageId;
-  onPageChange: (page: PageId) => void;
+  onPageChange?: (page: PageId) => void;
 }
 
 export const MainLayout: React.FC<MainLayoutProps> = ({ 
@@ -18,12 +19,21 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   onPageChange 
 }) => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const router = useRouter();
+
+  const handlePageChange = (page: PageId) => {
+    if (onPageChange) {
+      onPageChange(page);
+    } else {
+      router.push(`/${page}`);
+    }
+  };
 
   return (
     <div className="flex h-screen bg-gray-50">
       <Sidebar
         currentPage={currentPage}
-        onPageChange={onPageChange}
+        onPageChange={handlePageChange}
         collapsed={sidebarCollapsed}
         onToggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
       />
@@ -38,7 +48,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
       
       <MobileNavigation
         currentPage={currentPage}
-        onPageChange={onPageChange}
+        onPageChange={handlePageChange}
       />
     </div>
   );
