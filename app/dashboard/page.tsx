@@ -6,13 +6,11 @@ import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { ProgressBar } from '@/components/ui/ProgressBar';
-import { PageId } from '@/lib/types';
+import { useRouter } from 'next/navigation';
 
-interface DashboardPageProps {
-  onPageChange: (page: PageId) => void;
-}
+export default function DashboardPage() {
+  const router = useRouter();
 
-export default function DashboardPage({ onPageChange }: DashboardPageProps) {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -20,7 +18,7 @@ export default function DashboardPage({ onPageChange }: DashboardPageProps) {
           <h1 className="text-2xl font-bold text-gray-900">Welcome back!</h1>
           <p className="text-gray-600">Ready to continue your learning journey?</p>
         </div>
-        <Button onClick={() => onPageChange('tutor')}>
+        <Button onClick={() => router.push('/tutor')}>
           <Plus className="w-4 h-4 mr-2" />
           Start Learning
         </Button>
@@ -90,7 +88,9 @@ export default function DashboardPage({ onPageChange }: DashboardPageProps) {
                   <p className="text-sm text-gray-500">45 minutes ago</p>
                 </div>
               </div>
-              <Button variant="ghost" size="small">Resume</Button>
+              <Button variant="ghost" size="small" onClick={() => router.push('/tutor')}>
+                Resume
+              </Button>
             </div>
             <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
               <div className="flex items-center space-x-3">
@@ -100,7 +100,9 @@ export default function DashboardPage({ onPageChange }: DashboardPageProps) {
                   <p className="text-sm text-gray-500">2 hours ago</p>
                 </div>
               </div>
-              <Button variant="ghost" size="small">Review</Button>
+              <Button variant="ghost" size="small" onClick={() => router.push('/flashcards')}>
+                Review
+              </Button>
             </div>
           </div>
         </Card>
