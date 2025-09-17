@@ -76,7 +76,7 @@ export class TutorAIService {
         suggestions,
         learningStyle,
         provider: response.provider,
-        model: response.model,
+        model: response.model || 'unknown',
         timestamp: response.timestamp,
         usage: response.usage
       };
