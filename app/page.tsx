@@ -1,12 +1,6 @@
-'use client';
-
-import { Button } from '@/components/ui/Button'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { HomePageActions } from '@/components/home/HomePageActions'
 
 export default function HomePage() {
-  const router = useRouter();
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
@@ -18,14 +12,7 @@ export default function HomePage() {
             Your intelligent learning companion powered by AI. Master any subject with personalized tutoring, 
             spaced repetition flashcards, and collaborative study groups.
           </p>
-          <div className="flex gap-4 justify-center">
-            <Button onClick={() => router.push('/dashboard')} size="large">
-              Get Started
-            </Button>
-            <Button variant="outline" size="large">
-              Learn More
-            </Button>
-          </div>
+          <HomePageActions />
         </div>
         
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">

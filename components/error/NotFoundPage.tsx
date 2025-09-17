@@ -1,25 +1,15 @@
 import React from 'react';
-import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
 
 interface NotFoundPageProps {
   title?: string;
   message?: string;
-  onGoHome?: () => void;
 }
 
 export const NotFoundPage: React.FC<NotFoundPageProps> = ({
   title = 'Page Not Found',
   message = "Sorry, we couldn't find the page you're looking for.",
-  onGoHome,
 }) => {
-  const handleGoHome = () => {
-    if (onGoHome) {
-      onGoHome();
-    } else {
-      window.location.href = '/';
-    }
-  };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
@@ -37,9 +27,12 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({
           {message}
         </p>
         
-        <Button onClick={handleGoHome} className="w-full">
+        <Link 
+          href="/"
+          className="inline-block w-full bg-blue-600 text-white font-medium rounded-lg px-4 py-2 hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        >
           Go Home
-        </Button>
+        </Link>
       </div>
     </div>
   );
