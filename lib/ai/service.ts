@@ -1,11 +1,11 @@
-import { AIProvider, ChatMessage, AIResponse, AIOptions, AIConfig, LearningStyle } from './types';
+import { AIProvider, ChatMessage, AIResponse, AIOptions, AIConfig, LearningStyle, LearningStyleAnalysis } from './types';
 import { OpenAIProvider } from './providers/openai';
 import { AnthropicProvider } from './providers/anthropic';
 import { GeminiProvider } from './providers/gemini';
 import { HuggingFaceProvider } from './providers/huggingface';
 import { OllamaProvider } from './providers/ollama';
 import { FallbackProvider } from './providers/fallback';
-import { learningStyleDetector, LearningStyleAnalysis } from './learningStyleDetector';
+import { learningStyleDetector } from './learningStyleDetector';
 
 export class AIService {
   private providers: Map<string, AIProvider> = new Map();

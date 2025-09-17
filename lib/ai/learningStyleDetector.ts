@@ -1,11 +1,4 @@
-import { LearningStyle, ChatMessage } from './types';
-
-export interface LearningStyleAnalysis {
-  detectedStyle: LearningStyle;
-  confidence: number;
-  reasoning: string;
-  suggestions: string[];
-}
+import { LearningStyle, ChatMessage, LearningStyleAnalysis, ChatSession } from './types';
 
 export interface LearningPatterns {
   visual: string[];
@@ -118,7 +111,7 @@ export class LearningStyleDetector {
     };
 
     Object.entries(this.patterns).forEach(([style, keywords]) => {
-      keywords.forEach(keyword => {
+      keywords.forEach((keyword: string) => {
         const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
         const matches = content.match(regex);
         if (matches) {
