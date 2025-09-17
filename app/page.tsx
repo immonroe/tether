@@ -1,3 +1,4 @@
+import React from 'react';
 import { HomePageActions } from '@/components/home/HomePageActions'
 
 export default function HomePage() {
