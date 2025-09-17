@@ -18,6 +18,7 @@ export interface AIOptions {
   model?: string;
   systemPrompt?: string;
   learningStyle?: LearningStyle;
+  includeImages?: boolean;
 }
 
 export interface AIResponse {

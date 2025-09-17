@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { Upload, Mic, PenTool, Send, AlertCircle, Loader2 } from 'lucide-react';
+import { Upload, Mic, PenTool, Send, AlertCircle, Loader2, Image, Lightbulb, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { ChatMessage } from '@/lib/types';
@@ -17,6 +17,14 @@ interface ChatInterfaceProps {
   onLearningStyleChange?: (style: LearningStyle) => void;
   userId?: string;
   showLearningInsights?: boolean;
+}
+
+interface EnhancedChatMessage extends ChatMessage {
+  images?: string[];
+  suggestions?: string[];
+  provider?: string;
+  model?: string;
+  fallback?: boolean;
 }
 
 export const ChatInterface: React.FC<ChatInterfaceProps> = ({ 
@@ -109,20 +117,74 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
           />
         )}
         
-        {messages.map((chat) => (
-          <div key={chat.id} className={`flex ${chat.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-              chat.sender === 'user' 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-gray-100 text-gray-900'
-            }`}>
-              <p className="text-sm whitespace-pre-wrap">{chat.message}</p>
-              <p className={`text-xs mt-1 ${chat.sender === 'user' ? 'text-blue-100' : 'text-gray-500'}`}>
-                {chat.timestamp}
-              </p>
+        {messages.map((chat) => {
+          const enhancedChat = chat as EnhancedChatMessage;
+          return (
+            <div key={chat.id} className={`flex ${chat.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                chat.sender === 'user' 
+                  ? 'bg-blue-600 text-white' 
+                  : enhancedChat.fallback 
+                    ? 'bg-yellow-50 text-yellow-900 border border-yellow-200'
+                    : 'bg-gray-100 text-gray-900'
+              }`}>
+                <p className="text-sm whitespace-pre-wrap">{chat.message}</p>
+                
+                {/* Images */}
+                {enhancedChat.images && enhancedChat.images.length > 0 && (
+                  <div className="mt-3 space-y-2">
+                    {enhancedChat.images.map((image, index) => (
+                      <div key={index} className="bg-white p-2 rounded border">
+                        <div className="flex items-center space-x-2 text-xs text-gray-600">
+                          <Image className="w-3 h-3" />
+                          <span>{image}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                
+                {/* Suggestions */}
+                {enhancedChat.suggestions && enhancedChat.suggestions.length > 0 && (
+                  <div className="mt-3 space-y-1">
+                    <div className="flex items-center space-x-1 text-xs text-gray-600">
+                      <Lightbulb className="w-3 h-3" />
+                      <span>Suggestions:</span>
+                    </div>
+                    {enhancedChat.suggestions.map((suggestion, index) => (
+                      <div key={index} className="text-xs text-gray-600 pl-4">
+                        • {suggestion}
+                      </div>
+                    ))}
+                  </div>
+                )}
+                
+                {/* Provider info */}
+                {enhancedChat.provider && enhancedChat.model && (
+                  <div className="flex items-center justify-between mt-2">
+                    <p className={`text-xs ${chat.sender === 'user' ? 'text-blue-100' : 'text-gray-500'}`}>
+                      {chat.timestamp}
+                    </p>
+                    <div className="flex items-center space-x-1">
+                      {enhancedChat.fallback && (
+                        <RefreshCw className="w-3 h-3 text-yellow-600" />
+                      )}
+                      <span className={`text-xs ${chat.sender === 'user' ? 'text-blue-100' : 'text-gray-500'}`}>
+                        {enhancedChat.provider}
+                      </span>
+                    </div>
+                  </div>
+                )}
+                
+                {!enhancedChat.provider && (
+                  <p className={`text-xs mt-1 ${chat.sender === 'user' ? 'text-blue-100' : 'text-gray-500'}`}>
+                    {chat.timestamp}
+                  </p>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
         
         {isLoading && (
           <div className="flex justify-start">

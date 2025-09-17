@@ -7,4 +7,4 @@ export * from './providers/gemini';
 export * from './providers/huggingface';
 export * from './providers/ollama';
 export * from './providers/fallback';
-export * from './flashcardService';
+export * from './tutorService';

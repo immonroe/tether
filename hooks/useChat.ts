@@ -119,7 +119,13 @@ export const useChat = ({
       const aiMessage: ChatMessage = {
         role: 'assistant',
         content: data.data.message,
-        timestamp: data.data.timestamp
+        timestamp: data.data.timestamp,
+        // Add enhanced properties
+        ...(data.data.images && { images: data.data.images }),
+        ...(data.data.suggestions && { suggestions: data.data.suggestions }),
+        ...(data.data.provider && { provider: data.data.provider }),
+        ...(data.data.model && { model: data.data.model }),
+        ...(data.data.fallback && { fallback: data.data.fallback })
       };
 
       // Add AI response
