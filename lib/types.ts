@@ -78,3 +78,31 @@ export interface SidebarItem {
   label: string;
   icon: React.ComponentType<{ className?: string }>;
 }
+
+// Error and Loading Types
+export interface ErrorState {
+  id: string;
+  message: string;
+  code: string;
+  statusCode: number;
+  timestamp: Date;
+  context?: string;
+}
+
+export interface LoadingState {
+  key: string;
+  isLoading: boolean;
+  startTime?: Date;
+}
+
+export interface ToastNotification {
+  id: string;
+  type: 'success' | 'error' | 'warning' | 'info';
+  title: string;
+  message?: string;
+  duration?: number;
+  action?: {
+    label: string;
+    onClick: () => void;
+  };
+}

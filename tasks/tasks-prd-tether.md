@@ -10,16 +10,19 @@
 - `lib/supabase.ts` - Supabase client configuration
 - `lib/types.ts` - TypeScript type definitions for the application
 - `lib/ai/` - AI integration utilities and API handlers
-- `components/ui/` - Reusable UI components (buttons, inputs, modals)
+- `components/ui/` - Reusable UI components (buttons, inputs, modals, loading, error components)
+- `components/error/` - Error page components (ErrorPage, NotFoundPage)
+- `components/providers/` - Context providers (ErrorProvider, LoadingProvider)
 - `components/chat/` - AI tutor chat interface components
 - `components/flashcards/` - Flashcard creation and review components
 - `components/study-groups/` - Study group matching and session components
 - `components/progress/` - Progress tracking and gamification components
 - `app/` - Next.js app router pages and layouts
 - `app/api/` - API routes for backend functionality
-- `hooks/` - Custom React hooks for state management
+- `hooks/` - Custom React hooks for state management and error handling
 - `utils/` - Utility functions and helpers
-- `stores/` - Zustand stores for global state management
+- `stores/` - Zustand stores for global state management (auth, error, loading)
+- `lib/errors.ts` - Custom error classes and error handling utilities
 - `styles/globals.css` - Global styles and Tailwind imports
 
 ### Notes
@@ -47,7 +50,7 @@
   - [x] 2.3 Create reusable UI component library (Button, Input, Modal, etc.)
   - [x] 2.4 Implement routing structure with Next.js App Router
   - [x] 2.5 Create layout components and navigation system
-  - [ ] 2.6 Set up error handling and loading states
+  - [x] 2.6 Set up error handling and loading states
 
 - [ ] 3.0 AI Tutor Chat Interface
   - [x] 3.1 Create chat message components and conversation UI

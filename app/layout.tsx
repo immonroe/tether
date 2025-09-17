@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/next"
+import { ErrorProvider } from '@/components/providers/ErrorProvider'
+import { LoadingProvider } from '@/components/providers/LoadingProvider'
+import { ErrorBoundary } from '@/components/ui/ErrorBoundary'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,7 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        <ErrorBoundary>
+          <ErrorProvider>
+            <LoadingProvider>
+              {children}
+            </LoadingProvider>
+          </ErrorProvider>
+        </ErrorBoundary>
         <Analytics />
       </body>
     </html>
