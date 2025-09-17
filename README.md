@@ -71,10 +71,17 @@
    
    Fill in your environment variables:
    ```env
+   # Supabase Configuration
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   
+   # AI Provider Configuration (Primary: Gemini - Free!)
+   NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key
+   
+   # Optional: Additional AI Providers for Fallback
    OPENAI_API_KEY=your_openai_api_key
-   # Add other AI service keys as needed
+   ANTHROPIC_API_KEY=your_anthropic_api_key
+   HUGGINGFACE_API_KEY=your_huggingface_api_key
    ```
 
 4. **Set up Supabase**
@@ -82,14 +89,20 @@
    - Run the database migrations from `supabase/migrations/`
    - Configure Row Level Security (RLS) policies
 
-5. **Start the development server**
+5. **Set up AI Integration (Recommended)**
+   - Get a free Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+   - Add `NEXT_PUBLIC_GEMINI_API_KEY=your_key_here` to `.env.local`
+   - Test the integration: `node scripts/test-gemini.js`
+   - See `AI_SETUP.md` for detailed AI provider setup
+
+6. **Start the development server**
    ```bash
    npm run dev
    # or
    yarn dev
    ```
 
-6. **Open your browser**
+7. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 📁 Project Structure
@@ -98,28 +111,46 @@
 tether/
 ├── app/                    # Next.js App Router pages
 │   ├── api/               # API routes
+│   │   └── chat/          # AI chat API endpoint
 │   ├── (auth)/            # Authentication pages
 │   ├── dashboard/         # Main dashboard
-│   ├── chat/              # AI tutor interface
+│   ├── tutor/             # AI tutor interface
 │   ├── flashcards/        # Flashcard management
-│   └── groups/            # Study groups
+│   ├── groups/            # Study groups
+│   └── progress/          # Progress tracking
 ├── components/            # Reusable UI components
 │   ├── ui/                # Base UI components
 │   ├── chat/              # Chat interface components
 │   ├── flashcards/        # Flashcard components
+│   │   ├── FlashcardLibrary.tsx
+│   │   ├── FlashcardStudy.tsx
+│   │   └── index.ts
 │   ├── study-groups/      # Study group components
 │   └── progress/          # Progress tracking components
 ├── lib/                   # Utility libraries
-│   ├── ai/                # AI integration utilities
+│   ├── ai/                # AI integration system
+│   │   ├── providers/     # AI provider implementations
+│   │   │   ├── gemini.ts      # Google Gemini (Primary)
+│   │   │   ├── openai.ts      # OpenAI GPT
+│   │   │   ├── anthropic.ts   # Anthropic Claude
+│   │   │   ├── huggingface.ts # Hugging Face
+│   │   │   ├── ollama.ts      # Local Ollama
+│   │   │   └── fallback.ts    # Fallback responses
+│   │   ├── service.ts     # AI service orchestrator
+│   │   ├── tutorService.ts # Tutor-specific AI logic
+│   │   └── types.ts       # AI-related type definitions
 │   ├── supabase.ts        # Supabase client
 │   └── types.ts           # TypeScript definitions
 ├── hooks/                 # Custom React hooks
 ├── stores/                # Zustand state stores
-├── utils/                 # Helper functions
+├── scripts/               # Development and testing scripts
+│   ├── test-chat-api.js   # Chat API testing
+│   └── test-gemini.js     # Gemini API testing
 ├── supabase/              # Database migrations and types
-└── tasks/                 # Development task management
-    ├── prd-tether.md      # Product Requirements Document
-    └── tasks-prd-tether.md # Implementation task list
+├── tasks/                 # Development task management
+│   ├── prd-tether.md      # Product Requirements Document
+│   └── tasks-prd-tether.md # Implementation task list
+└── AI_SETUP.md           # AI provider setup guide
 ```
 
 ## 🎯 Development Workflow
@@ -144,6 +175,18 @@ This project uses the AI Dev Tasks workflow for structured development:
 3. **Track progress**: Tasks are automatically marked complete and committed to git
 
 ## 🧪 Testing
+
+### AI Integration Testing
+
+```bash
+# Test Gemini API integration
+node scripts/test-gemini.js
+
+# Test chat API with Gemini
+node scripts/test-chat-api.js
+```
+
+### Standard Testing
 
 ```bash
 # Run all tests
@@ -170,9 +213,11 @@ npm start
 
 ### AI Tutor System
 - **Adaptive Learning**: AI adjusts explanations based on your responses
-- **Multi-Modal Support**: Text, voice, images, and drawing capabilities
+- **Learning Style Adaptation**: Supports visual, auditory, kinesthetic, and mixed learning styles
+- **Multi-Provider Support**: Primary Gemini integration with fallback to other AI providers
 - **Context Awareness**: Remembers previous conversations and learning progress
 - **Subject Expertise**: Handles any topic with tailored learning approaches
+- **Free AI Integration**: Powered by Google Gemini (no credit card required)
 
 ### Spaced Repetition Engine
 - **SM-2 Algorithm**: Proven spaced repetition for long-term retention
