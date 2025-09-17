@@ -117,9 +117,9 @@ export class GeminiProvider implements AIProvider {
       return {
         content,
         usage: {
-          promptTokens: this.estimateTokens(contents.map(c => c.parts.map(p => p.text).join('')).join('')),
+          promptTokens: this.estimateTokens(contents.map((c: any) => c.parts.map((p: any) => p.text).join('')).join('')),
           completionTokens: this.estimateTokens(content),
-          totalTokens: this.estimateTokens(contents.map(c => c.parts.map(p => p.text).join('')).join('')) + this.estimateTokens(content),
+          totalTokens: this.estimateTokens(contents.map((c: any) => c.parts.map((p: any) => p.text).join('')).join('')) + this.estimateTokens(content),
         },
         model: model,
         provider: this.name,
