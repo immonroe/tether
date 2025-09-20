@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Chat functionality and AI interaction hook
+ * 
+ * This file is part of the Tether AI learning platform.
+ * chat functionality and ai interaction hook for the application.
+ */
+
 import { useState, useCallback, useEffect } from 'react';
 import { ChatMessage, LearningStyle } from '@/lib/ai/types';
 import { chatHistoryService } from '@/lib/ai/chatHistory';

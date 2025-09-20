@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Root layout component with providers and global styles
+ * 
+ * This file is part of the Tether AI learning platform.
+ * root layout component with providers and global styles for the application.
+ */
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/next"

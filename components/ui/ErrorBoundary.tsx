@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Error boundary component for error handling
+ * 
+ * This file is part of the Tether AI learning platform.
+ * error boundary component for error handling for the application.
+ */
+
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Button } from './Button';

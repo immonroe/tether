@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Toast notification management hook
+ * 
+ * This file is part of the Tether AI learning platform.
+ * toast notification management hook for the application.
+ */
+
 import { useState, useCallback } from 'react';
 import { Toast } from '@/components/ui/Toast';
 

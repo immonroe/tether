@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Main chat interface with AI tutor integration
+ * 
+ * This file is part of the Tether AI learning platform.
+ * main chat interface with ai tutor integration for the application.
+ */
+
 
 import React, { useState, useRef } from 'react';
 import { Upload, Mic, PenTool, Send, AlertCircle, Loader2, Image, Lightbulb, RefreshCw } from 'lucide-react';

@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Progress bar component for tracking completion
+ * 
+ * This file is part of the Tether AI learning platform.
+ * progress bar component for tracking completion for the application.
+ */
+
 import React from 'react';
 
 interface ProgressBarProps {

@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Study groups page layout
+ * 
+ * This file is part of the Tether AI learning platform.
+ * study groups page layout for the application.
+ */
+
 
 import React, { useState } from 'react';
 import { MainLayout } from '@/components/layout/MainLayout';

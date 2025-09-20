@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Main AI service orchestrator with multiple provider support
+ * 
+ * This file is part of the Tether AI learning platform.
+ * main ai service orchestrator with multiple provider support for the application.
+ */
+
 import { AIProvider, ChatMessage, AIResponse, AIOptions, AIConfig, LearningStyle, LearningStyleAnalysis } from './types';
 import { OpenAIProvider } from './providers/openai';
 import { AnthropicProvider } from './providers/anthropic';

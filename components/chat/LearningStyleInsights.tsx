@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Learning style analysis and insights display
+ * 
+ * This file is part of the Tether AI learning platform.
+ * learning style analysis and insights display for the application.
+ */
+
 
 import React, { useState, useEffect } from 'react';
 import { Brain, TrendingUp, Lightbulb, Target } from 'lucide-react';

@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Application header with navigation
+ * 
+ * This file is part of the Tether AI learning platform.
+ * application header with navigation for the application.
+ */
+
 
 import React from 'react';
 import { Button } from '@/components/ui/Button';

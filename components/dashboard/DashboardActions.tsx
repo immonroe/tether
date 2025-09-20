@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Dashboard action buttons and quick access
+ * 
+ * This file is part of the Tether AI learning platform.
+ * dashboard action buttons and quick access for the application.
+ */
+
 
 import React from 'react';
 import { Plus } from 'lucide-react';

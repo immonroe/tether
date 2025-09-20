@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Loading context provider for global loading states
+ * 
+ * This file is part of the Tether AI learning platform.
+ * loading context provider for global loading states for the application.
+ */
+
 
 import React, { createContext, useContext } from 'react';
 import { useLoadingStore } from '@/stores/loading';

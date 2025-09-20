@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Project file
+ * 
+ * This file is part of the Tether AI learning platform.
+ * project file for the application.
+ */
+
 // Test script for the chat API endpoint
 require('dotenv').config({ path: '.env.local' });
 

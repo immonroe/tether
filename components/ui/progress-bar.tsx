@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Reusable UI component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * reusable ui component for the application.
+ */
+
 import * as React from "react"
 import { cn } from "@/lib/utils"
 

@@ -1,3 +1,9 @@
+# AI_SETUP
+
+**Project Overview**: AI service and integration utilities
+
+---
+
 # AI Provider Setup Guide
 
 This guide explains how to set up AI providers for the Tether learning platform. The system includes multiple AI providers with automatic fallback to ensure the application works even without API keys.

@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Tutor page layout with chat interface
+ * 
+ * This file is part of the Tether AI learning platform.
+ * tutor page layout with chat interface for the application.
+ */
+
 
 import React, { useState } from 'react';
 import { MainLayout } from '@/components/layout/MainLayout';

@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Authentication state management with Zustand
+ * 
+ * This file is part of the Tether AI learning platform.
+ * authentication state management with zustand for the application.
+ */
+
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { AuthUser } from '@/lib/auth'

@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Error handling and display hook
+ * 
+ * This file is part of the Tether AI learning platform.
+ * error handling and display hook for the application.
+ */
+
 import { useCallback } from 'react';
 import { useErrorHandler as useErrorHandlerContext } from '@/components/providers/ErrorProvider';
 import { AppError } from '@/lib/errors';

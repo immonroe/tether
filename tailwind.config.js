@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Tailwind CSS configuration and design system setup
+ * 
+ * This file is part of the Tether AI learning platform.
+ * tailwind css configuration and design system setup for the application.
+ */
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [

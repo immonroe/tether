@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Progress tracking and analytics page
+ * 
+ * This file is part of the Tether AI learning platform.
+ * progress tracking and analytics page for the application.
+ */
+
 
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/Card';

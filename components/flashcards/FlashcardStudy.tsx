@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Flashcard study session component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * flashcard study session component for the application.
+ */
+
 
 import React, { useState } from 'react';
 import { X, Check, RotateCcw } from 'lucide-react';

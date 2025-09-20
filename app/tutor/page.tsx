@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview AI tutor chat interface page
+ * 
+ * This file is part of the Tether AI learning platform.
+ * ai tutor chat interface page for the application.
+ */
+
 
 import React from 'react';
 import { ChatInterface } from '@/components/chat/ChatInterface';

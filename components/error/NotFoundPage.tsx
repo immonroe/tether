@@ -1,3 +1,10 @@
+/**
+ * @fileoverview 404 not found page component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * 404 not found page component for the application.
+ */
+
 import React from 'react';
 import Link from 'next/link';
 

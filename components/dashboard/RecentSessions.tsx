@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Recent study sessions dashboard component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * recent study sessions dashboard component for the application.
+ */
+
 
 import React from 'react';
 import { MessageCircle, BookOpen } from 'lucide-react';

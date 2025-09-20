@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Toast notification component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * toast notification component for the application.
+ */
+
 import React, { useEffect, useState } from 'react';
 import { Button } from './Button';
 

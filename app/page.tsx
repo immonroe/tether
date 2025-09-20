@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Main homepage component for Tether AI learning platform
+ * 
+ * This file is part of the Tether AI learning platform.
+ * main homepage component for tether ai learning platform for the application.
+ */
+
 import React from 'react';
 import { HomePageActions } from '@/components/home/HomePageActions'
 

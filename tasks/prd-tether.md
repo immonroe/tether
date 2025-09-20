@@ -1,3 +1,9 @@
+# prd-tether
+
+**Project Overview**: Product Requirements Document for Tether AI platform
+
+---
+
 # Product Requirements Document: Tether
 
 ## Introduction/Overview

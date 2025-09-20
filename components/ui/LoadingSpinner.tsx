@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Loading spinner component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * loading spinner component for the application.
+ */
+
 import React from 'react';
 
 interface LoadingSpinnerProps {

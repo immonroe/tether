@@ -1,3 +1,10 @@
+/**
+ * @fileoverview AI service type definitions and interfaces
+ * 
+ * This file is part of the Tether AI learning platform.
+ * ai service type definitions and interfaces for the application.
+ */
+
 // AI service types and interfaces
 
 export interface AIProvider {

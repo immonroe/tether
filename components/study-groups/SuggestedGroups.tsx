@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Suggested study groups component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * suggested study groups component for the application.
+ */
+
 
 import React from 'react';
 import { Button } from '@/components/ui/Button';

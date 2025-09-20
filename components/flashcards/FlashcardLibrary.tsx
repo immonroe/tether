@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Flashcard library and management component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * flashcard library and management component for the application.
+ */
+
 
 import React, { useState } from 'react';
 import { Search, Filter, RotateCcw } from 'lucide-react';

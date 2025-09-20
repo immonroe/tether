@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Learning style analysis and adaptation logic
+ * 
+ * This file is part of the Tether AI learning platform.
+ * learning style analysis and adaptation logic for the application.
+ */
+
 import { LearningStyle, ChatMessage, LearningStyleAnalysis, ChatSession } from './types';
 
 export interface LearningPatterns {

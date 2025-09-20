@@ -1,3 +1,10 @@
+/**
+ * @fileoverview AI provider implementation
+ * 
+ * This file is part of the Tether AI learning platform.
+ * ai provider implementation for the application.
+ */
+
 import { AIProvider, ChatMessage, AIResponse, AIOptions } from '../types';
 
 export class HuggingFaceProvider implements AIProvider {

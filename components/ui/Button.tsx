@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Reusable button component with multiple variants
+ * 
+ * This file is part of the Tether AI learning platform.
+ * reusable button component with multiple variants for the application.
+ */
+
 import React from 'react';
 
 interface ButtonProps {

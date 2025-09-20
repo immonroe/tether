@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Homepage action buttons and navigation
+ * 
+ * This file is part of the Tether AI learning platform.
+ * homepage action buttons and navigation for the application.
+ */
+
 
 import React from 'react';
 import { Button } from '@/components/ui/Button'

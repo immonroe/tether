@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Study statistics and analytics component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * study statistics and analytics component for the application.
+ */
+
 
 import React from 'react';
 import { ProgressBar } from '@/components/ui/ProgressBar';

@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Global error state management
+ * 
+ * This file is part of the Tether AI learning platform.
+ * global error state management for the application.
+ */
+
 import { create } from 'zustand';
 import { AppError, logError } from '@/lib/errors';
 

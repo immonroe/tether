@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Project file
+ * 
+ * This file is part of the Tether AI learning platform.
+ * project file for the application.
+ */
+
 // Test script for Gemini integration
 require('dotenv').config({ path: '.env.local' });
 const { GoogleGenerativeAI } = require('@google/generative-ai');

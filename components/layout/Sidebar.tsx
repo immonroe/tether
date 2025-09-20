@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Sidebar navigation component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * sidebar navigation component for the application.
+ */
+
 
 import React from 'react';
 import { Home, MessageCircle, BookOpen, Users, BarChart3, ChevronRight, User, Settings } from 'lucide-react';

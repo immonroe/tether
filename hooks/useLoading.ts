@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Loading state management hook
+ * 
+ * This file is part of the Tether AI learning platform.
+ * loading state management hook for the application.
+ */
+
 import { useCallback } from 'react';
 import { useLoadingStore } from '@/stores/loading';
 

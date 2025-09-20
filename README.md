@@ -1,3 +1,9 @@
+# README
+
+**Project Overview**: Project documentation and setup instructions
+
+---
+
 # 🎓 Tether - AI-Powered Learning Platform
 
 **Tether** is an innovative AI-powered learning platform that combines personalized tutoring, mastery learning, spaced repetition, and AI-facilitated study groups. Our mission is to replicate the benefits of one-on-one tutoring (addressing Bloom's 2 Sigma Problem) while incorporating community-based reinforcement learning principles.

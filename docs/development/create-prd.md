@@ -1,3 +1,9 @@
+# create-prd
+
+**Project Overview**: Project documentation
+
+---
+
 # Rule: Generating a Product Requirements Document (PRD)
 
 ## Goal

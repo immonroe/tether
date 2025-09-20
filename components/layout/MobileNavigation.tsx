@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Mobile-responsive navigation component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * mobile-responsive navigation component for the application.
+ */
+
 
 import React from 'react';
 import { Home, MessageCircle, BookOpen, Users, BarChart3 } from 'lucide-react';

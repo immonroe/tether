@@ -1,3 +1,10 @@
+/**
+ * @fileoverview AI service and integration utilities
+ * 
+ * This file is part of the Tether AI learning platform.
+ * ai service and integration utilities for the application.
+ */
+
 // AI service exports
 export * from './types';
 export * from './service';

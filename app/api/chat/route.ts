@@ -1,3 +1,10 @@
+/**
+ * @fileoverview API route for AI chat functionality
+ * 
+ * This file is part of the Tether AI learning platform.
+ * api route for ai chat functionality for the application.
+ */
+
 import { NextRequest, NextResponse } from 'next/server';
 import { tutorAIService } from '@/lib/ai/tutorService';
 import { ChatMessage } from '@/lib/ai/types';

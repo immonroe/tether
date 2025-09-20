@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Error page component for application errors
+ * 
+ * This file is part of the Tether AI learning platform.
+ * error page component for application errors for the application.
+ */
+
 import React from 'react';
 import { Button } from '@/components/ui/Button';
 import { AppError, getErrorMessage, getErrorCode } from '@/lib/errors';

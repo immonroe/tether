@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Reusable UI component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * reusable ui component for the application.
+ */
+
 export { Button } from './Button';
 export { Input } from './Input';
 export { Card } from './Card';

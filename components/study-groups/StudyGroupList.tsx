@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Study group listing and discovery component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * study group listing and discovery component for the application.
+ */
+
 
 import React from 'react';
 import { Users } from 'lucide-react';

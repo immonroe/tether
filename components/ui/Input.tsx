@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Reusable input component with validation
+ * 
+ * This file is part of the Tether AI learning platform.
+ * reusable input component with validation for the application.
+ */
+
 import React from 'react';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {

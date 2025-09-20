@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Authentication utilities and user management
+ * 
+ * This file is part of the Tether AI learning platform.
+ * authentication utilities and user management for the application.
+ */
+
 import { createBrowserClient, createServerClient as createSupabaseServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import { User } from '@supabase/supabase-js'

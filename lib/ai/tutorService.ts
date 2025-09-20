@@ -1,3 +1,10 @@
+/**
+ * @fileoverview AI tutor-specific service and conversation management
+ * 
+ * This file is part of the Tether AI learning platform.
+ * ai tutor-specific service and conversation management for the application.
+ */
+
 import { AIProvider, ChatMessage, AIResponse, AIOptions } from './types';
 import { GeminiProvider } from './providers/gemini';
 import { aiService } from './service';

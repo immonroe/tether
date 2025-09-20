@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Main application layout wrapper
+ * 
+ * This file is part of the Tether AI learning platform.
+ * main application layout wrapper for the application.
+ */
+
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';

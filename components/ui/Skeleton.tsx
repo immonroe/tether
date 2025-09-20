@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Skeleton loading component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * skeleton loading component for the application.
+ */
+
 import React from 'react';
 
 interface SkeletonProps {

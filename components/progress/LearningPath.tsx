@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Learning path visualization component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * learning path visualization component for the application.
+ */
+
 
 import React from 'react';
 import { Check } from 'lucide-react';

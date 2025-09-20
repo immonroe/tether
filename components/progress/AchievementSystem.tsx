@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Achievement and gamification system component
+ * 
+ * This file is part of the Tether AI learning platform.
+ * achievement and gamification system component for the application.
+ */
+
 
 import React from 'react';
 import { Badge } from '@/components/ui/Badge';

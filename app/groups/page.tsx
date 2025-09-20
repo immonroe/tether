@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Study groups discovery and management page
+ * 
+ * This file is part of the Tether AI learning platform.
+ * study groups discovery and management page for the application.
+ */
+
 
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';

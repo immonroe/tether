@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Progress page layout with statistics
+ * 
+ * This file is part of the Tether AI learning platform.
+ * progress page layout with statistics for the application.
+ */
+
 
 import React, { useState } from 'react';
 import { MainLayout } from '@/components/layout/MainLayout';

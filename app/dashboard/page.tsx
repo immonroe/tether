@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Dashboard page component with user overview
+ * 
+ * This file is part of the Tether AI learning platform.
+ * dashboard page component with user overview for the application.
+ */
+
 import React from 'react';
 import { Flame, Target, Clock, Award } from 'lucide-react';
 import { Card } from '@/components/ui/Card';

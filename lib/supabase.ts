@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Supabase client configuration and database connection
+ * 
+ * This file is part of the Tether AI learning platform.
+ * supabase client configuration and database connection for the application.
+ */
+
 import { createClient } from '@supabase/supabase-js'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL

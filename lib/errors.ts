@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Custom error classes and error handling utilities
+ * 
+ * This file is part of the Tether AI learning platform.
+ * custom error classes and error handling utilities for the application.
+ */
+
 // Custom error classes for better error handling
 export class AppError extends Error {
   public readonly code: string;

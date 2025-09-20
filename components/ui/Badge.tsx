@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Badge component for status indicators
+ * 
+ * This file is part of the Tether AI learning platform.
+ * badge component for status indicators for the application.
+ */
+
 import React from 'react';
 
 interface BadgeProps {

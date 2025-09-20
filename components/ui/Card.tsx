@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Card container component for content sections
+ * 
+ * This file is part of the Tether AI learning platform.
+ * card container component for content sections for the application.
+ */
+
 import React from 'react';
 
 interface CardProps {

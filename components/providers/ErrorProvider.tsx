@@ -1,4 +1,11 @@
 'use client';
+/**
+ * @fileoverview Error context provider for global error handling
+ * 
+ * This file is part of the Tether AI learning platform.
+ * error context provider for global error handling for the application.
+ */
+
 
 import React, { createContext, useContext, useEffect } from 'react';
 import { useErrorStore } from '@/stores/error';

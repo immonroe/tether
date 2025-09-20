@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Loading state management across the application
+ * 
+ * This file is part of the Tether AI learning platform.
+ * loading state management across the application for the application.
+ */
+
 import { create } from 'zustand';
 
 interface LoadingState {

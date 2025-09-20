@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Database operations for AI chat history and user data
+ * 
+ * This file is part of the Tether AI learning platform.
+ * database operations for ai chat history and user data for the application.
+ */
+
 import { supabase } from '@/lib/supabase';
 import { ChatMessage, ChatSession, LearningStyle } from './types';
 

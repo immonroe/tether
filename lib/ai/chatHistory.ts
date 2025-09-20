@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Chat history management and persistence
+ * 
+ * This file is part of the Tether AI learning platform.
+ * chat history management and persistence for the application.
+ */
+
 import { ChatMessage, ChatSession, LearningStyle } from './types';
 import { chatDatabaseService } from './databaseService';
 

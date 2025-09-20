@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Core TypeScript type definitions for the entire application
+ * 
+ * This file is part of the Tether AI learning platform.
+ * core typescript type definitions for the entire application for the application.
+ */
+
 // Core types for the Tether application
 
 export interface User {
