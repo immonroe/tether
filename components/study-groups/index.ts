@@ -7,3 +7,5 @@
 
 export { StudyGroupList } from './StudyGroupList';
 export { SuggestedGroups } from './SuggestedGroups';
+export { UserPreferencesForm } from './UserPreferencesForm';
+export { MatchingResults } from './MatchingResults';

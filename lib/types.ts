@@ -53,6 +53,57 @@ export interface StudyGroup {
   maxMembers?: number;
 }
 
+export interface UserPreferences {
+  id: string;
+  userId: string;
+  subjects: string[];
+  skillLevel: 'beginner' | 'intermediate' | 'advanced';
+  learningGoals: string[];
+  availability: {
+    timezone: string;
+    preferredTimes: string[]; // e.g., ['morning', 'evening']
+    daysOfWeek: number[]; // 0-6 (Sunday-Saturday)
+  };
+  groupSize: {
+    min: number;
+    max: number;
+  };
+  learningStyle: 'visual' | 'auditory' | 'kinesthetic' | 'reading' | 'mixed';
+  studyFrequency: 'daily' | 'weekly' | 'bi-weekly' | 'monthly';
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface MatchingCriteria {
+  subject: string;
+  skillLevel: 'beginner' | 'intermediate' | 'advanced';
+  availability: {
+    timezone: string;
+    preferredTimes: string[];
+    daysOfWeek: number[];
+  };
+  learningGoals: string[];
+  groupSize: {
+    min: number;
+    max: number;
+  };
+  learningStyle: 'visual' | 'auditory' | 'kinesthetic' | 'reading' | 'mixed';
+}
+
+export interface UserMatch {
+  userId: string;
+  name: string;
+  matchScore: number;
+  matchingFactors: {
+    subject: boolean;
+    skillLevel: boolean;
+    availability: boolean;
+    learningGoals: number; // number of matching goals
+    learningStyle: boolean;
+  };
+  preferences: UserPreferences;
+}
+
 export interface Achievement {
   id: string;
   title: string;
