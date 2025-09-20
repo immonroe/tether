@@ -7,3 +7,4 @@
 
 export { FlashcardStudy } from './FlashcardStudy';
 export { FlashcardLibrary } from './FlashcardLibrary';
+export { FlashcardCreator } from './FlashcardCreator';

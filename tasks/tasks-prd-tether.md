@@ -67,14 +67,14 @@
   - [x] 3.6 Implement chat history persistence and retrieval
   - [x] 3.7 Add adaptive learning style detection and response formatting
 
-- [ ] 4.0 Spaced Repetition Flashcard System
+- [x] 4.0 Spaced Repetition Flashcard System
   - [x] 4.1 Create flashcard creation interface with rich text editor
-  - [ ] 4.2 Implement AI-powered flashcard suggestion system
-  - [ ] 4.3 Build SM-2 spaced repetition algorithm
+  - [x] 4.2 Implement AI-powered flashcard suggestion system
+  - [x] 4.3 Build SM-2 spaced repetition algorithm
   - [x] 4.4 Create flashcard review interface with performance tracking
-  - [ ] 4.5 Implement flashcard scheduling and notification system
-  - [ ] 4.6 Add flashcard statistics and analytics dashboard
-  - [ ] 4.7 Create bulk flashcard import/export functionality
+  - [x] 4.5 Implement flashcard scheduling and notification system
+  - [x] 4.6 Add flashcard statistics and analytics dashboard
+  - [x] 4.7 Create bulk flashcard import/export functionality
 
 - [ ] 5.0 Study Groups Feature
   - [ ] 5.1 Implement user matching algorithm based on preferences

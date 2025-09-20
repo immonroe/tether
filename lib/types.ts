@@ -34,6 +34,12 @@ export interface Flashcard {
   deckId: string;
   createdAt: Date;
   updatedAt: Date;
+  // SM-2 Spaced Repetition Algorithm fields
+  easeFactor: number;
+  interval: number;
+  repetitions: number;
+  lastReviewed?: string;
+  quality?: number; // 0-5 rating from user
 }
 
 export interface StudyGroup {
